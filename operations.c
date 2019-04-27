@@ -250,5 +250,5 @@ int nested_loop_join(int base_addr_r, int base_addr_s) {
     } while (next_r);
     save_last_blk(&buf, blk_saver, index_saver, save_to);
     freeBuffer(&buf);
-    return JOIN_START + 1;
+    return start_addr;
 }
