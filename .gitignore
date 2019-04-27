@@ -1,0 +1,8 @@
+html/
+/latex/
+test.c
+.idea/
+cmake-build-debug/
+blk_backup
+.DS_Store/
+*/.DS_Store
