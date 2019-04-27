@@ -1,0 +1,4 @@
+<map id="storeData" name="storeData">
+<area shape="rect" id="node1" title="存储数据 storeData 随机生成的数据存储 R 0&#45;15 S 20&#45;51" alt="" coords="5,5,84,31"/>
+<area shape="rect" id="node2" href="$test_8c.html#aff93774519eb65789b7b10888c4c8a19" title="生成随机数 Random 生成low&#45;high之间的随机数" alt="" coords="132,5,204,31"/>
+</map>

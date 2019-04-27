@@ -1,0 +1,91 @@
+\hypertarget{operations_8c}{}\section{operations.\+c 文件参考}
+\label{operations_8c}\index{operations.c@{operations.c}}
+
+
+本次实验可能用的操作  
+
+
+{\ttfamily \#include \char`\"{}operations.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}utils.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}extmem.\+h\char`\"{}}\newline
+operations.\+c 的引用(Include)关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{operations_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{函数}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{operations_8c_ad34b1f1affb1929b4f40f58727b34eed}{read\+\_\+data}} (int addr)
+\item 
+\mbox{\Hypertarget{operations_8c_ab35ce8656c6d512ca1e8d9d603175905}\label{operations_8c_ab35ce8656c6d512ca1e8d9d603175905}} 
+int {\bfseries do\+\_\+create\+\_\+data} (int start\+\_\+addr, int begin1, int end1, int begin2, int end2, int flag, char $\ast$relation)
+\item 
+\mbox{\Hypertarget{operations_8c_ad52d4c0e1aaa5453bda27c5c7f50cbd5}\label{operations_8c_ad52d4c0e1aaa5453bda27c5c7f50cbd5}} 
+void {\bfseries create\+\_\+data} (char $\ast$relation, int base\+\_\+address, int times, int begin1, int end1, int begin2, int end2)
+\item 
+void \mbox{\hyperlink{operations_8c_a082a8a3b4d4dc490e00faf3dbc6007ff}{linear\+\_\+search}} (int base\+\_\+address, int value)
+\item 
+void \mbox{\hyperlink{operations_8c_aa94d5a0ce423aed14de75a020c379dc3}{project}} (int base\+\_\+address)
+\end{DoxyCompactItemize}
+
+
+\subsection{详细描述}
+本次实验可能用的操作 
+
+\begin{DoxyAuthor}{作者}
+Shi 
+\end{DoxyAuthor}
+\begin{DoxyDate}{日期}
+0425 
+\end{DoxyDate}
+
+
+\subsection{函数说明}
+\mbox{\Hypertarget{operations_8c_a082a8a3b4d4dc490e00faf3dbc6007ff}\label{operations_8c_a082a8a3b4d4dc490e00faf3dbc6007ff}} 
+\index{operations.c@{operations.c}!linear\_search@{linear\_search}}
+\index{linear\_search@{linear\_search}!operations.c@{operations.c}}
+\subsubsection{\texorpdfstring{linear\_search()}{linear\_search()}}
+{\footnotesize\ttfamily void linear\+\_\+search (\begin{DoxyParamCaption}\item[{int}]{base\+\_\+address,  }\item[{int}]{value }\end{DoxyParamCaption})}
+
+线性搜索算法，结果保存在20000开头的block中 
+\begin{DoxyParams}{参数}
+{\em base\+\_\+address} & 关系基地址 \\
+\hline
+{\em value} & 要搜索的值 \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{operations_8c_aa94d5a0ce423aed14de75a020c379dc3}\label{operations_8c_aa94d5a0ce423aed14de75a020c379dc3}} 
+\index{operations.c@{operations.c}!project@{project}}
+\index{project@{project}!operations.c@{operations.c}}
+\subsubsection{\texorpdfstring{project()}{project()}}
+{\footnotesize\ttfamily void project (\begin{DoxyParamCaption}\item[{int}]{base\+\_\+address }\end{DoxyParamCaption})}
+
+连接操作 
+\begin{DoxyParams}{参数}
+{\em base\+\_\+address} & 关系基地址，在本实验中为\+R的基地址 \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{operations_8c_ad34b1f1affb1929b4f40f58727b34eed}\label{operations_8c_ad34b1f1affb1929b4f40f58727b34eed}} 
+\index{operations.c@{operations.c}!read\_data@{read\_data}}
+\index{read\_data@{read\_data}!operations.c@{operations.c}}
+\subsubsection{\texorpdfstring{read\_data()}{read\_data()}}
+{\footnotesize\ttfamily int read\+\_\+data (\begin{DoxyParamCaption}\item[{int}]{addr }\end{DoxyParamCaption})}
+
+从指定地址开始连续读数据 
+\begin{DoxyParams}{参数}
+{\em addr} & 起始地址 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{返回值}
+{\em 0} & 读取成功 \\
+\hline
+\end{DoxyRetVals}

@@ -1,0 +1,671 @@
+\hypertarget{test_8c}{}\section{test.\+c 文件参考}
+\label{test_8c}\index{test.c@{test.c}}
+
+
+Tools for experiment 4  
+
+
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}extmem.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+test.\+c 的引用(Include)关系图\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=331pt]{test_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{宏定义}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{test_8c_a392fb874e547e582e9c66a08a1f23326}\label{test_8c_a392fb874e547e582e9c66a08a1f23326}} 
+\#define {\bfseries M\+AX}~1000
+\end{DoxyCompactItemize}
+\subsection*{类型定义}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{test_8c_a1692460d13535f710d2f761878abf22a}\label{test_8c_a1692460d13535f710d2f761878abf22a}} 
+typedef struct Temp\+Array {\bfseries Temp\+Array}
+\item 
+\mbox{\Hypertarget{test_8c_a2b152da7f8b98d24d21fab4167e9103c}\label{test_8c_a2b152da7f8b98d24d21fab4167e9103c}} 
+typedef struct index {\bfseries index}
+\end{DoxyCompactItemize}
+\subsection*{函数}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{test_8c_aff93774519eb65789b7b10888c4c8a19}{Random}} (int low, int high)
+\begin{DoxyCompactList}\small\item\em 生成随机数 Random 生成low-\/high之间的随机数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{test_8c_aa783f2e9b7eef927a5bcbb611f702f5b}{Output\+Data}} (int begin\+Addr, int n, unsigned int $\ast$blk, Buffer $\ast$buf, int flag)
+\begin{DoxyCompactList}\small\item\em Output\+Data 打印存储的数据 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{test_8c_a530f84eb94411e5e6173fc6b81812594}{store\+Data}} (unsigned int $\ast$blk, Buffer $\ast$buf)
+\begin{DoxyCompactList}\small\item\em 存储数据 store\+Data 随机生成的数据存储 R 0-\/15 S 20-\/51 \end{DoxyCompactList}\item 
+Temp\+Array $\ast$ \mbox{\hyperlink{test_8c_a33520b9569d0a278ea549603cea0ab9c}{load\+Data}} (unsigned int $\ast$blk, Buffer $\ast$buf, int len, int addr, int templen)
+\begin{DoxyCompactList}\small\item\em 读取数据 load\+Data 读取块中数据到\+Temp\+Array \end{DoxyCompactList}\item 
+Temp\+Array $\ast$ \mbox{\hyperlink{test_8c_ad794f236157f4a6c78772e35de467d32}{sort}} (Temp\+Array $\ast$temp, int len)
+\begin{DoxyCompactList}\small\item\em 排序 sort简单冒泡排序 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{test_8c_a3feff9b846c94ca61c6e2e42ff31d779}{Select\+Relationship}} (unsigned int $\ast$blk, Buffer $\ast$buf, Temp\+Array $\ast$tempR, Temp\+Array $\ast$tempS)
+\begin{DoxyCompactList}\small\item\em 选择关系 线性搜索 二元搜索 索引算法 结果存放磁盘 \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{test_8c_acd56c4e9edc15184d94ed095d812ab13}{Binary}} (int num, Temp\+Array $\ast$temp, int len)
+\begin{DoxyCompactList}\small\item\em Binary\+Search 二分搜索 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{test_8c_a566652d2aad90375e36376daf9d9fd27}{Binary\+Search}} (unsigned int $\ast$blk, Buffer $\ast$buf, Temp\+Array $\ast$tempR, Temp\+Array $\ast$tempS)
+\begin{DoxyCompactList}\small\item\em Binary\+Search 二分搜索 \end{DoxyCompactList}\item 
+index $\ast$ \mbox{\hyperlink{test_8c_ab9459d99cd9e49ae10b9eab3e80a377a}{Create\+Index}} (unsigned int $\ast$blk, Buffer $\ast$buf, Temp\+Array $\ast$temp, int addr, int len)
+\begin{DoxyCompactList}\small\item\em 创建索引 Create\+Index \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{test_8c_aa62ca305fc28b05c0b38eda1fe988775}{Index\+Search}} (unsigned int $\ast$blk, Buffer $\ast$buf, Temp\+Array $\ast$tempR, Temp\+Array $\ast$tempS)
+\begin{DoxyCompactList}\small\item\em 索引算法 Index\+Search 索引搜索 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{test_8c_a543ab8499ab4b2bb1badb7bc194c2542}{Mapping\+Relationship}} (unsigned int $\ast$blk, Buffer $\ast$buf)
+\begin{DoxyCompactList}\small\item\em 投影关系 实现关系投影，并存储在磁盘上 \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{test_8c_a374d72c089a6a7a7b3c9ad4e5cb03954}{Merge}} (unsigned int left, int ln, unsigned int right, int rn, Buffer $\ast$buf, int addr)
+\begin{DoxyCompactList}\small\item\em 归并 Merge \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{test_8c_ac5dc8649947f63a62fea8bd004eaaa4e}{Exsort}} (unsigned int saddr, int n, Buffer $\ast$buf, int addr)
+\begin{DoxyCompactList}\small\item\em 归并 Exsort \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{test_8c_abc412b5a2a816162cc57a520cf905fcb}{Connect\+Relationship}} (unsigned int $\ast$blk, Buffer $\ast$buf, Temp\+Array $\ast$tempR, Temp\+Array $\ast$tempS)
+\begin{DoxyCompactList}\small\item\em 连接关系 Nst\+\_\+\+Loop\+\_\+\+Join算法 Sort\+\_\+\+Merge\+\_\+\+Join算法 Hash\+\_\+\+Join算法 结果存放磁盘 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{test_8c_ab28353aa39112710238ead96fb80a133}{Nst\+\_\+\+Loop\+\_\+\+Join}} (unsigned int $\ast$blk, Buffer $\ast$buf)
+\begin{DoxyCompactList}\small\item\em Nst\+\_\+\+Loop\+\_\+\+Join \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{test_8c_aff4fbcc46817b66d0c9f9c83eef5e854}{Sort\+\_\+\+Merge\+\_\+\+Join}} (unsigned int $\ast$blk, Buffer $\ast$buf, Temp\+Array $\ast$tempR, Temp\+Array $\ast$tempS)
+\begin{DoxyCompactList}\small\item\em Sort\+\_\+\+Merge\+\_\+\+Join Sort\+\_\+\+Merge\+\_\+\+Join \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{test_8c_ae6dadee14445b54db70973e9a37eea85}{Hash\+\_\+\+Join}} (unsigned int $\ast$blk, Buffer $\ast$buf, Temp\+Array $\ast$tempR, Temp\+Array $\ast$tempS, int addr)
+\begin{DoxyCompactList}\small\item\em Hash\+\_\+\+Join Hash\+\_\+\+Join \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{test_8c_afebbcbf183ab5513d735540d749b7542}{Collection\+Relationship}} (unsigned int $\ast$blk, Buffer $\ast$buf)
+\begin{DoxyCompactList}\small\item\em 集合操作 并、交、差 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{test_8c_a573044d57d323e23fa9bee3e60b5ea2d}{Calculation\+Intersection}} (unsigned int $\ast$blk, Buffer $\ast$buf, Temp\+Array $\ast$temp)
+\begin{DoxyCompactList}\small\item\em Calculation\+Intersection 集合的交集 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{test_8c_a6164397c9ec5c6a703e51079ad266e5c}{Union\+Of\+Relation}} (unsigned int $\ast$blk, Buffer $\ast$buf, Temp\+Array $\ast$temp)
+\begin{DoxyCompactList}\small\item\em Union\+Of\+Relation R S的并，去重 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{test_8c_abd3199bbbc667af75ba003d22956ff55}{Intersection\+Of\+Relation}} (unsigned int $\ast$blk, Buffer $\ast$buf, Temp\+Array $\ast$temp)
+\begin{DoxyCompactList}\small\item\em Intersection\+Of\+Relation R S的交 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{test_8c_a1bf346d20917bf22802550b13c12001e}{Difference\+Of\+Relation}} (unsigned int $\ast$blk, Buffer $\ast$buf, Temp\+Array $\ast$temp)
+\begin{DoxyCompactList}\small\item\em Difference\+Of\+Relation R和\+S的差集 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{test_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{test_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+int {\bfseries main} ()
+\item 
+Temp\+Array $\ast$$\ast$ \mbox{\hyperlink{test_8c_a02257dee8ef4003bcb3205d3427ad700}{Fill\+Bucket}} (unsigned int $\ast$blk, Buffer $\ast$buf, int addr, int block\+\_\+len)
+\begin{DoxyCompactList}\small\item\em Fill\+Bucket 填充桶 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{变量}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{test_8c_a2d0bbeedebacf2cad568bacdee700aa3}\label{test_8c_a2d0bbeedebacf2cad568bacdee700aa3}} 
+int {\bfseries bucketR} \mbox{[}5\mbox{]}
+\item 
+\mbox{\Hypertarget{test_8c_a826bb600d84ddaf01efb875f645d5e0a}\label{test_8c_a826bb600d84ddaf01efb875f645d5e0a}} 
+int {\bfseries bucketS} \mbox{[}5\mbox{]}
+\item 
+\mbox{\Hypertarget{test_8c_aab80fdf775a7bc4b0fd35d80f910e0e1}\label{test_8c_aab80fdf775a7bc4b0fd35d80f910e0e1}} 
+int {\bfseries index\+\_\+countR} =0
+\item 
+\mbox{\Hypertarget{test_8c_a11692514016e5146885a1fa5b7cb57fc}\label{test_8c_a11692514016e5146885a1fa5b7cb57fc}} 
+int {\bfseries index\+\_\+countS} =0
+\item 
+\mbox{\Hypertarget{test_8c_a0297608ded6cb378a4b8ca622b290d9c}\label{test_8c_a0297608ded6cb378a4b8ca622b290d9c}} 
+int {\bfseries temp\+\_\+count} =0
+\item 
+\mbox{\Hypertarget{test_8c_a2ddaef06030c82e4fdada9198d87090b}\label{test_8c_a2ddaef06030c82e4fdada9198d87090b}} 
+int {\bfseries tempflag} =0
+\item 
+\mbox{\Hypertarget{test_8c_a4f2344ff1c0e7f4051e41d2f3450a471}\label{test_8c_a4f2344ff1c0e7f4051e41d2f3450a471}} 
+Temp\+Array $\ast$$\ast$ {\bfseries BucketR}
+\item 
+\mbox{\Hypertarget{test_8c_a1a7f5580d809c3fdd00af83214eeeccf}\label{test_8c_a1a7f5580d809c3fdd00af83214eeeccf}} 
+Temp\+Array $\ast$$\ast$ {\bfseries BucketS}
+\end{DoxyCompactItemize}
+
+
+\subsection{详细描述}
+Tools for experiment 4 
+
+\begin{DoxyAuthor}{作者}
+Jiahan Shi 
+\end{DoxyAuthor}
+
+
+\subsection{函数说明}
+\mbox{\Hypertarget{test_8c_acd56c4e9edc15184d94ed095d812ab13}\label{test_8c_acd56c4e9edc15184d94ed095d812ab13}} 
+\index{test.c@{test.c}!Binary@{Binary}}
+\index{Binary@{Binary}!test.c@{test.c}}
+\subsubsection{\texorpdfstring{Binary()}{Binary()}}
+{\footnotesize\ttfamily int Binary (\begin{DoxyParamCaption}\item[{int}]{num,  }\item[{Temp\+Array $\ast$}]{temp,  }\item[{int}]{len }\end{DoxyParamCaption})}
+
+
+
+Binary\+Search 二分搜索 
+
+
+\begin{DoxyParams}{参数}
+{\em int} & num 查找的key值 \\
+\hline
+{\em Temp\+Array} & $\ast$temp 数据 \\
+\hline
+{\em int} & len 元组数目 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+int 返回查找元组所在的位置 
+\end{DoxyReturn}
+\mbox{\Hypertarget{test_8c_a566652d2aad90375e36376daf9d9fd27}\label{test_8c_a566652d2aad90375e36376daf9d9fd27}} 
+\index{test.c@{test.c}!BinarySearch@{BinarySearch}}
+\index{BinarySearch@{BinarySearch}!test.c@{test.c}}
+\subsubsection{\texorpdfstring{BinarySearch()}{BinarySearch()}}
+{\footnotesize\ttfamily void Binary\+Search (\begin{DoxyParamCaption}\item[{unsigned int $\ast$}]{blk,  }\item[{Buffer $\ast$}]{buf,  }\item[{Temp\+Array $\ast$}]{tempR,  }\item[{Temp\+Array $\ast$}]{tempS }\end{DoxyParamCaption})}
+
+
+
+Binary\+Search 二分搜索 
+
+
+\begin{DoxyParams}{参数}
+{\em unsigned} & int $\ast$ blk \\
+\hline
+{\em Buffer} & $\ast$buf \\
+\hline
+{\em Temp\+Array} & $\ast$tempR R元组 \\
+\hline
+{\em Temp\+Array} & $\ast$tempS S元组 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{test_8c_a573044d57d323e23fa9bee3e60b5ea2d}\label{test_8c_a573044d57d323e23fa9bee3e60b5ea2d}} 
+\index{test.c@{test.c}!CalculationIntersection@{CalculationIntersection}}
+\index{CalculationIntersection@{CalculationIntersection}!test.c@{test.c}}
+\subsubsection{\texorpdfstring{CalculationIntersection()}{CalculationIntersection()}}
+{\footnotesize\ttfamily void Calculation\+Intersection (\begin{DoxyParamCaption}\item[{unsigned int $\ast$}]{blk,  }\item[{Buffer $\ast$}]{buf,  }\item[{Temp\+Array $\ast$}]{temp }\end{DoxyParamCaption})}
+
+
+
+Calculation\+Intersection 集合的交集 
+
+
+\begin{DoxyParams}{参数}
+{\em unsigned} & int $\ast$blk \\
+\hline
+{\em Buffer} & $\ast$buf \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+Temp\+Array $\ast$temp 
+\end{DoxyReturn}
+\mbox{\Hypertarget{test_8c_afebbcbf183ab5513d735540d749b7542}\label{test_8c_afebbcbf183ab5513d735540d749b7542}} 
+\index{test.c@{test.c}!CollectionRelationship@{CollectionRelationship}}
+\index{CollectionRelationship@{CollectionRelationship}!test.c@{test.c}}
+\subsubsection{\texorpdfstring{CollectionRelationship()}{CollectionRelationship()}}
+{\footnotesize\ttfamily void Collection\+Relationship (\begin{DoxyParamCaption}\item[{unsigned int $\ast$}]{blk,  }\item[{Buffer $\ast$}]{buf }\end{DoxyParamCaption})}
+
+
+
+集合操作 并、交、差 
+
+
+\begin{DoxyParams}{参数}
+{\em unsigned} & int $\ast$ blk \\
+\hline
+{\em Buffer} & $\ast$buf \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{test_8c_abc412b5a2a816162cc57a520cf905fcb}\label{test_8c_abc412b5a2a816162cc57a520cf905fcb}} 
+\index{test.c@{test.c}!ConnectRelationship@{ConnectRelationship}}
+\index{ConnectRelationship@{ConnectRelationship}!test.c@{test.c}}
+\subsubsection{\texorpdfstring{ConnectRelationship()}{ConnectRelationship()}}
+{\footnotesize\ttfamily void Connect\+Relationship (\begin{DoxyParamCaption}\item[{unsigned int $\ast$}]{blk,  }\item[{Buffer $\ast$}]{buf,  }\item[{Temp\+Array $\ast$}]{tempR,  }\item[{Temp\+Array $\ast$}]{tempS }\end{DoxyParamCaption})}
+
+
+
+连接关系 Nst\+\_\+\+Loop\+\_\+\+Join算法 Sort\+\_\+\+Merge\+\_\+\+Join算法 Hash\+\_\+\+Join算法 结果存放磁盘 
+
+
+\begin{DoxyParams}{参数}
+{\em unsigned} & int $\ast$ blk \\
+\hline
+{\em Buffer} & $\ast$buf \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{test_8c_ab9459d99cd9e49ae10b9eab3e80a377a}\label{test_8c_ab9459d99cd9e49ae10b9eab3e80a377a}} 
+\index{test.c@{test.c}!CreateIndex@{CreateIndex}}
+\index{CreateIndex@{CreateIndex}!test.c@{test.c}}
+\subsubsection{\texorpdfstring{CreateIndex()}{CreateIndex()}}
+{\footnotesize\ttfamily index $\ast$ Create\+Index (\begin{DoxyParamCaption}\item[{unsigned int $\ast$}]{blk,  }\item[{Buffer $\ast$}]{buf,  }\item[{Temp\+Array $\ast$}]{temp,  }\item[{int}]{addr,  }\item[{int}]{len }\end{DoxyParamCaption})}
+
+
+
+创建索引 Create\+Index 
+
+
+\begin{DoxyParams}{参数}
+{\em Temp\+Array} & $\ast$temp 对temp创建索引 \\
+\hline
+{\em int} & addr 索引存储的块号 \\
+\hline
+{\em int} & len 块数 \\
+\hline
+{\em unsigned} & int $\ast$blk \\
+\hline
+{\em Buffer} & $\ast$buf \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+index$\ast$ 返回创建的索引 
+\end{DoxyReturn}
+\mbox{\Hypertarget{test_8c_a1bf346d20917bf22802550b13c12001e}\label{test_8c_a1bf346d20917bf22802550b13c12001e}} 
+\index{test.c@{test.c}!DifferenceOfRelation@{DifferenceOfRelation}}
+\index{DifferenceOfRelation@{DifferenceOfRelation}!test.c@{test.c}}
+\subsubsection{\texorpdfstring{DifferenceOfRelation()}{DifferenceOfRelation()}}
+{\footnotesize\ttfamily void Difference\+Of\+Relation (\begin{DoxyParamCaption}\item[{unsigned int $\ast$}]{blk,  }\item[{Buffer $\ast$}]{buf,  }\item[{Temp\+Array $\ast$}]{temp }\end{DoxyParamCaption})}
+
+
+
+Difference\+Of\+Relation R和\+S的差集 
+
+
+\begin{DoxyParams}{参数}
+{\em unsigned} & int $\ast$blk \\
+\hline
+{\em Buffer} & $\ast$buf \\
+\hline
+{\em Temp\+Array} & $\ast$temp \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{test_8c_ac5dc8649947f63a62fea8bd004eaaa4e}\label{test_8c_ac5dc8649947f63a62fea8bd004eaaa4e}} 
+\index{test.c@{test.c}!Exsort@{Exsort}}
+\index{Exsort@{Exsort}!test.c@{test.c}}
+\subsubsection{\texorpdfstring{Exsort()}{Exsort()}}
+{\footnotesize\ttfamily unsigned int Exsort (\begin{DoxyParamCaption}\item[{unsigned int}]{saddr,  }\item[{int}]{n,  }\item[{Buffer $\ast$}]{buf,  }\item[{int}]{addr }\end{DoxyParamCaption})}
+
+
+
+归并 Exsort 
+
+
+\begin{DoxyParams}{参数}
+{\em unsigned} & int saddr \\
+\hline
+{\em int} & n \\
+\hline
+{\em Buffer} & $\ast$buf \\
+\hline
+{\em int} & addr \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+unsigned int 
+\end{DoxyReturn}
+complete sorting 函数调用图\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=205pt]{test_8c_ac5dc8649947f63a62fea8bd004eaaa4e_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{test_8c_a02257dee8ef4003bcb3205d3427ad700}\label{test_8c_a02257dee8ef4003bcb3205d3427ad700}} 
+\index{test.c@{test.c}!FillBucket@{FillBucket}}
+\index{FillBucket@{FillBucket}!test.c@{test.c}}
+\subsubsection{\texorpdfstring{FillBucket()}{FillBucket()}}
+{\footnotesize\ttfamily Temp\+Array$\ast$$\ast$ Fill\+Bucket (\begin{DoxyParamCaption}\item[{unsigned int $\ast$}]{blk,  }\item[{Buffer $\ast$}]{buf,  }\item[{int}]{addr,  }\item[{int}]{block\+\_\+len }\end{DoxyParamCaption})}
+
+
+
+Fill\+Bucket 填充桶 
+
+
+\begin{DoxyParams}{参数}
+{\em unsigned} & int $\ast$blk \\
+\hline
+{\em Buffer} & $\ast$buf \\
+\hline
+{\em int} & addr 块起始地址 \\
+\hline
+{\em int} & block\+\_\+len 块数目 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+Temp\+Array $\ast$$\ast$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{test_8c_ae6dadee14445b54db70973e9a37eea85}\label{test_8c_ae6dadee14445b54db70973e9a37eea85}} 
+\index{test.c@{test.c}!Hash\_Join@{Hash\_Join}}
+\index{Hash\_Join@{Hash\_Join}!test.c@{test.c}}
+\subsubsection{\texorpdfstring{Hash\_Join()}{Hash\_Join()}}
+{\footnotesize\ttfamily void Hash\+\_\+\+Join (\begin{DoxyParamCaption}\item[{unsigned int $\ast$}]{blk,  }\item[{Buffer $\ast$}]{buf,  }\item[{Temp\+Array $\ast$}]{tempR,  }\item[{Temp\+Array $\ast$}]{tempS,  }\item[{int}]{addr }\end{DoxyParamCaption})}
+
+
+
+Hash\+\_\+\+Join Hash\+\_\+\+Join 
+
+
+\begin{DoxyParams}{参数}
+{\em unsigned} & int $\ast$blk \\
+\hline
+{\em Buffer} & $\ast$buf \\
+\hline
+{\em Temp\+Array} & $\ast$tempR R元组 \\
+\hline
+{\em Temp\+Array} & $\ast$tempS S元组 \\
+\hline
+{\em int} & addr hash\+\_\+join结果存储块起始地址 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{test_8c_aa62ca305fc28b05c0b38eda1fe988775}\label{test_8c_aa62ca305fc28b05c0b38eda1fe988775}} 
+\index{test.c@{test.c}!IndexSearch@{IndexSearch}}
+\index{IndexSearch@{IndexSearch}!test.c@{test.c}}
+\subsubsection{\texorpdfstring{IndexSearch()}{IndexSearch()}}
+{\footnotesize\ttfamily void Index\+Search (\begin{DoxyParamCaption}\item[{unsigned int $\ast$}]{blk,  }\item[{Buffer $\ast$}]{buf,  }\item[{Temp\+Array $\ast$}]{tempR,  }\item[{Temp\+Array $\ast$}]{tempS }\end{DoxyParamCaption})}
+
+
+
+索引算法 Index\+Search 索引搜索 
+
+
+\begin{DoxyParams}{参数}
+{\em unsigned} & int $\ast$ blk \\
+\hline
+{\em Buffer} & $\ast$buf \\
+\hline
+{\em Temp\+Array} & $\ast$tempR R元组 \\
+\hline
+{\em Temp\+Array} & $\ast$tempS S元组 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{test_8c_abd3199bbbc667af75ba003d22956ff55}\label{test_8c_abd3199bbbc667af75ba003d22956ff55}} 
+\index{test.c@{test.c}!IntersectionOfRelation@{IntersectionOfRelation}}
+\index{IntersectionOfRelation@{IntersectionOfRelation}!test.c@{test.c}}
+\subsubsection{\texorpdfstring{IntersectionOfRelation()}{IntersectionOfRelation()}}
+{\footnotesize\ttfamily void Intersection\+Of\+Relation (\begin{DoxyParamCaption}\item[{unsigned int $\ast$}]{blk,  }\item[{Buffer $\ast$}]{buf,  }\item[{Temp\+Array $\ast$}]{temp }\end{DoxyParamCaption})}
+
+
+
+Intersection\+Of\+Relation R S的交 
+
+
+\begin{DoxyParams}{参数}
+{\em unsigned} & int $\ast$blk \\
+\hline
+{\em Buffer} & $\ast$buf \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{test_8c_a33520b9569d0a278ea549603cea0ab9c}\label{test_8c_a33520b9569d0a278ea549603cea0ab9c}} 
+\index{test.c@{test.c}!loadData@{loadData}}
+\index{loadData@{loadData}!test.c@{test.c}}
+\subsubsection{\texorpdfstring{loadData()}{loadData()}}
+{\footnotesize\ttfamily Temp\+Array $\ast$ load\+Data (\begin{DoxyParamCaption}\item[{unsigned int $\ast$}]{blk,  }\item[{Buffer $\ast$}]{buf,  }\item[{int}]{len,  }\item[{int}]{addr,  }\item[{int}]{templen }\end{DoxyParamCaption})}
+
+
+
+读取数据 load\+Data 读取块中数据到\+Temp\+Array 
+
+
+\begin{DoxyParams}{参数}
+{\em unsigned} & int $\ast$ blk \\
+\hline
+{\em Buffer} & $\ast$ buf \\
+\hline
+{\em int} & len 块号数 \\
+\hline
+{\em int} & addr 起始块号 \\
+\hline
+{\em int} & templen 元组最大数目 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+Temp\+Array $\ast$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{test_8c_a543ab8499ab4b2bb1badb7bc194c2542}\label{test_8c_a543ab8499ab4b2bb1badb7bc194c2542}} 
+\index{test.c@{test.c}!MappingRelationship@{MappingRelationship}}
+\index{MappingRelationship@{MappingRelationship}!test.c@{test.c}}
+\subsubsection{\texorpdfstring{MappingRelationship()}{MappingRelationship()}}
+{\footnotesize\ttfamily void Mapping\+Relationship (\begin{DoxyParamCaption}\item[{unsigned int $\ast$}]{blk,  }\item[{Buffer $\ast$}]{buf }\end{DoxyParamCaption})}
+
+
+
+投影关系 实现关系投影，并存储在磁盘上 
+
+
+\begin{DoxyParams}{参数}
+{\em unsigned} & int $\ast$ blk \\
+\hline
+{\em Buffer} & $\ast$buf \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+void 
+\end{DoxyReturn}
+函数调用图\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{test_8c_a543ab8499ab4b2bb1badb7bc194c2542_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{test_8c_a374d72c089a6a7a7b3c9ad4e5cb03954}\label{test_8c_a374d72c089a6a7a7b3c9ad4e5cb03954}} 
+\index{test.c@{test.c}!Merge@{Merge}}
+\index{Merge@{Merge}!test.c@{test.c}}
+\subsubsection{\texorpdfstring{Merge()}{Merge()}}
+{\footnotesize\ttfamily unsigned int Merge (\begin{DoxyParamCaption}\item[{unsigned int}]{left,  }\item[{int}]{ln,  }\item[{unsigned int}]{right,  }\item[{int}]{rn,  }\item[{Buffer $\ast$}]{buf,  }\item[{int}]{addr }\end{DoxyParamCaption})}
+
+
+
+归并 Merge 
+
+
+\begin{DoxyParams}{参数}
+{\em unsigned} & int left \\
+\hline
+{\em int} & ln \\
+\hline
+{\em unsigned} & int right \\
+\hline
+{\em int} & rn \\
+\hline
+{\em Buffer} & $\ast$buf \\
+\hline
+{\em int} & addr \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+unsigned int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{test_8c_ab28353aa39112710238ead96fb80a133}\label{test_8c_ab28353aa39112710238ead96fb80a133}} 
+\index{test.c@{test.c}!Nst\_Loop\_Join@{Nst\_Loop\_Join}}
+\index{Nst\_Loop\_Join@{Nst\_Loop\_Join}!test.c@{test.c}}
+\subsubsection{\texorpdfstring{Nst\_Loop\_Join()}{Nst\_Loop\_Join()}}
+{\footnotesize\ttfamily void Nst\+\_\+\+Loop\+\_\+\+Join (\begin{DoxyParamCaption}\item[{unsigned int $\ast$}]{blk,  }\item[{Buffer $\ast$}]{buf }\end{DoxyParamCaption})}
+
+
+
+Nst\+\_\+\+Loop\+\_\+\+Join 
+
+
+\begin{DoxyParams}{参数}
+{\em unsigned} & int $\ast$ blk \\
+\hline
+{\em Buffer} & $\ast$buf \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+void 
+\end{DoxyReturn}
+函数调用图\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=266pt]{test_8c_ab28353aa39112710238ead96fb80a133_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{test_8c_aa783f2e9b7eef927a5bcbb611f702f5b}\label{test_8c_aa783f2e9b7eef927a5bcbb611f702f5b}} 
+\index{test.c@{test.c}!OutputData@{OutputData}}
+\index{OutputData@{OutputData}!test.c@{test.c}}
+\subsubsection{\texorpdfstring{OutputData()}{OutputData()}}
+{\footnotesize\ttfamily void Output\+Data (\begin{DoxyParamCaption}\item[{int}]{begin\+Addr,  }\item[{int}]{n,  }\item[{unsigned int $\ast$}]{blk,  }\item[{Buffer $\ast$}]{buf,  }\item[{int}]{flag }\end{DoxyParamCaption})}
+
+
+
+Output\+Data 打印存储的数据 
+
+
+\begin{DoxyParams}{参数}
+{\em int} & begin\+Addr 块号起始地址 \\
+\hline
+{\em int} & n 块数目 \\
+\hline
+{\em unsigned} & int $\ast$blk \\
+\hline
+{\em Buffer} & $\ast$buf \\
+\hline
+{\em int} & flag 标记是R\textbackslash{}S \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{test_8c_aff93774519eb65789b7b10888c4c8a19}\label{test_8c_aff93774519eb65789b7b10888c4c8a19}} 
+\index{test.c@{test.c}!Random@{Random}}
+\index{Random@{Random}!test.c@{test.c}}
+\subsubsection{\texorpdfstring{Random()}{Random()}}
+{\footnotesize\ttfamily int Random (\begin{DoxyParamCaption}\item[{int}]{low,  }\item[{int}]{high }\end{DoxyParamCaption})}
+
+
+
+生成随机数 Random 生成low-\/high之间的随机数 
+
+
+\begin{DoxyParams}{参数}
+{\em int} & low \\
+\hline
+{\em int} & high \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{test_8c_a3feff9b846c94ca61c6e2e42ff31d779}\label{test_8c_a3feff9b846c94ca61c6e2e42ff31d779}} 
+\index{test.c@{test.c}!SelectRelationship@{SelectRelationship}}
+\index{SelectRelationship@{SelectRelationship}!test.c@{test.c}}
+\subsubsection{\texorpdfstring{SelectRelationship()}{SelectRelationship()}}
+{\footnotesize\ttfamily void Select\+Relationship (\begin{DoxyParamCaption}\item[{unsigned int $\ast$}]{blk,  }\item[{Buffer $\ast$}]{buf,  }\item[{Temp\+Array $\ast$}]{tempR,  }\item[{Temp\+Array $\ast$}]{tempS }\end{DoxyParamCaption})}
+
+
+
+选择关系 线性搜索 二元搜索 索引算法 结果存放磁盘 
+
+
+\begin{DoxyParams}{参数}
+{\em unsigned} & int $\ast$ blk \\
+\hline
+{\em Buffer} & $\ast$buf \\
+\hline
+{\em Temp\+Array} & $\ast$tempR \\
+\hline
+{\em Temp\+Array} & $\ast$tempS \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{test_8c_ad794f236157f4a6c78772e35de467d32}\label{test_8c_ad794f236157f4a6c78772e35de467d32}} 
+\index{test.c@{test.c}!sort@{sort}}
+\index{sort@{sort}!test.c@{test.c}}
+\subsubsection{\texorpdfstring{sort()}{sort()}}
+{\footnotesize\ttfamily Temp\+Array $\ast$ sort (\begin{DoxyParamCaption}\item[{Temp\+Array $\ast$}]{temp,  }\item[{int}]{len }\end{DoxyParamCaption})}
+
+
+
+排序 sort简单冒泡排序 
+
+
+\begin{DoxyParams}{参数}
+{\em Temp\+Array} & $\ast$temp 对temp排序 \\
+\hline
+{\em int} & len 排序元组数目 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+Temp\+Array $\ast$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{test_8c_aff4fbcc46817b66d0c9f9c83eef5e854}\label{test_8c_aff4fbcc46817b66d0c9f9c83eef5e854}} 
+\index{test.c@{test.c}!Sort\_Merge\_Join@{Sort\_Merge\_Join}}
+\index{Sort\_Merge\_Join@{Sort\_Merge\_Join}!test.c@{test.c}}
+\subsubsection{\texorpdfstring{Sort\_Merge\_Join()}{Sort\_Merge\_Join()}}
+{\footnotesize\ttfamily void Sort\+\_\+\+Merge\+\_\+\+Join (\begin{DoxyParamCaption}\item[{unsigned int $\ast$}]{blk,  }\item[{Buffer $\ast$}]{buf,  }\item[{Temp\+Array $\ast$}]{tempR,  }\item[{Temp\+Array $\ast$}]{tempS }\end{DoxyParamCaption})}
+
+
+
+Sort\+\_\+\+Merge\+\_\+\+Join Sort\+\_\+\+Merge\+\_\+\+Join 
+
+
+\begin{DoxyParams}{参数}
+{\em unsigned} & int $\ast$ blk \\
+\hline
+{\em Buffer} & $\ast$buf \\
+\hline
+{\em Temp\+Array} & $\ast$tempR \\
+\hline
+{\em Temp\+Array} & $\ast$tempS \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{test_8c_a530f84eb94411e5e6173fc6b81812594}\label{test_8c_a530f84eb94411e5e6173fc6b81812594}} 
+\index{test.c@{test.c}!storeData@{storeData}}
+\index{storeData@{storeData}!test.c@{test.c}}
+\subsubsection{\texorpdfstring{storeData()}{storeData()}}
+{\footnotesize\ttfamily void store\+Data (\begin{DoxyParamCaption}\item[{unsigned int $\ast$}]{blk,  }\item[{Buffer $\ast$}]{buf }\end{DoxyParamCaption})}
+
+
+
+存储数据 store\+Data 随机生成的数据存储 R 0-\/15 S 20-\/51 
+
+
+\begin{DoxyParams}{参数}
+{\em unsigned} & int $\ast$blk \\
+\hline
+{\em Buffer} & $\ast$ buf \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+void 
+\end{DoxyReturn}
+函数调用图\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=229pt]{test_8c_a530f84eb94411e5e6173fc6b81812594_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{test_8c_a6164397c9ec5c6a703e51079ad266e5c}\label{test_8c_a6164397c9ec5c6a703e51079ad266e5c}} 
+\index{test.c@{test.c}!UnionOfRelation@{UnionOfRelation}}
+\index{UnionOfRelation@{UnionOfRelation}!test.c@{test.c}}
+\subsubsection{\texorpdfstring{UnionOfRelation()}{UnionOfRelation()}}
+{\footnotesize\ttfamily void Union\+Of\+Relation (\begin{DoxyParamCaption}\item[{unsigned int $\ast$}]{blk,  }\item[{Buffer $\ast$}]{buf,  }\item[{Temp\+Array $\ast$}]{temp }\end{DoxyParamCaption})}
+
+
+
+Union\+Of\+Relation R S的并，去重 
+
+
+\begin{DoxyParams}{参数}
+{\em unsigned} & int $\ast$ blk \\
+\hline
+{\em Buffer} & $\ast$buf \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+void 
+\end{DoxyReturn}

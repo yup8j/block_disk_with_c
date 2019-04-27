@@ -1,0 +1,1377 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.15"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Database Experiment: test.c 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Database Experiment
+   &#160;<span id="projectnumber">4</span>
+   </div>
+   <div id="projectbrief">2019Spring</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.15 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">宏定义</a> &#124;
+<a href="#typedef-members">类型定义</a> &#124;
+<a href="#func-members">函数</a> &#124;
+<a href="#var-members">变量</a>  </div>
+  <div class="headertitle">
+<div class="title">test.c 文件参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Tools for experiment 4  
+<a href="#details">更多...</a></p>
+<div class="textblock"><code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &quot;extmem.h&quot;</code><br />
+<code>#include &lt;time.h&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+test.c 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="test_8c__incl.png" border="0" usemap="#test_8c" alt=""/></div>
+<map name="test_8c" id="test_8c">
+<area shape="rect"  title="Tools for experiment 4" alt="" coords="144,5,197,31"/>
+<area shape="rect"  title=" " alt="" coords="5,79,69,104"/>
+<area shape="rect"  title=" " alt="" coords="93,79,154,104"/>
+<area shape="rect"  href="extmem_8h_source.html" title=" " alt="" coords="179,79,258,104"/>
+<area shape="rect"  title=" " alt="" coords="283,79,341,104"/>
+<area shape="rect"  title=" " alt="" coords="184,152,253,177"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+宏定义</h2></td></tr>
+<tr class="memitem:a392fb874e547e582e9c66a08a1f23326"><td class="memItemLeft" align="right" valign="top"><a id="a392fb874e547e582e9c66a08a1f23326"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>MAX</b>&#160;&#160;&#160;1000</td></tr>
+<tr class="separator:a392fb874e547e582e9c66a08a1f23326"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+类型定义</h2></td></tr>
+<tr class="memitem:a1692460d13535f710d2f761878abf22a"><td class="memItemLeft" align="right" valign="top"><a id="a1692460d13535f710d2f761878abf22a"></a>
+typedef struct TempArray&#160;</td><td class="memItemRight" valign="bottom"><b>TempArray</b></td></tr>
+<tr class="separator:a1692460d13535f710d2f761878abf22a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b152da7f8b98d24d21fab4167e9103c"><td class="memItemLeft" align="right" valign="top"><a id="a2b152da7f8b98d24d21fab4167e9103c"></a>
+typedef struct index&#160;</td><td class="memItemRight" valign="bottom"><b>index</b></td></tr>
+<tr class="separator:a2b152da7f8b98d24d21fab4167e9103c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:aff93774519eb65789b7b10888c4c8a19"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test_8c.html#aff93774519eb65789b7b10888c4c8a19">Random</a> (int low, int high)</td></tr>
+<tr class="memdesc:aff93774519eb65789b7b10888c4c8a19"><td class="mdescLeft">&#160;</td><td class="mdescRight">生成随机数 Random 生成low-high之间的随机数  <a href="#aff93774519eb65789b7b10888c4c8a19">更多...</a><br /></td></tr>
+<tr class="separator:aff93774519eb65789b7b10888c4c8a19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa783f2e9b7eef927a5bcbb611f702f5b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test_8c.html#aa783f2e9b7eef927a5bcbb611f702f5b">OutputData</a> (int beginAddr, int n, unsigned int *blk, Buffer *buf, int flag)</td></tr>
+<tr class="memdesc:aa783f2e9b7eef927a5bcbb611f702f5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">OutputData 打印存储的数据  <a href="#aa783f2e9b7eef927a5bcbb611f702f5b">更多...</a><br /></td></tr>
+<tr class="separator:aa783f2e9b7eef927a5bcbb611f702f5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a530f84eb94411e5e6173fc6b81812594"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test_8c.html#a530f84eb94411e5e6173fc6b81812594">storeData</a> (unsigned int *blk, Buffer *buf)</td></tr>
+<tr class="memdesc:a530f84eb94411e5e6173fc6b81812594"><td class="mdescLeft">&#160;</td><td class="mdescRight">存储数据 storeData 随机生成的数据存储 R 0-15 S 20-51  <a href="#a530f84eb94411e5e6173fc6b81812594">更多...</a><br /></td></tr>
+<tr class="separator:a530f84eb94411e5e6173fc6b81812594"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33520b9569d0a278ea549603cea0ab9c"><td class="memItemLeft" align="right" valign="top">TempArray *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test_8c.html#a33520b9569d0a278ea549603cea0ab9c">loadData</a> (unsigned int *blk, Buffer *buf, int len, int addr, int templen)</td></tr>
+<tr class="memdesc:a33520b9569d0a278ea549603cea0ab9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">读取数据 loadData 读取块中数据到TempArray  <a href="#a33520b9569d0a278ea549603cea0ab9c">更多...</a><br /></td></tr>
+<tr class="separator:a33520b9569d0a278ea549603cea0ab9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad794f236157f4a6c78772e35de467d32"><td class="memItemLeft" align="right" valign="top">TempArray *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test_8c.html#ad794f236157f4a6c78772e35de467d32">sort</a> (TempArray *temp, int len)</td></tr>
+<tr class="memdesc:ad794f236157f4a6c78772e35de467d32"><td class="mdescLeft">&#160;</td><td class="mdescRight">排序 sort简单冒泡排序  <a href="#ad794f236157f4a6c78772e35de467d32">更多...</a><br /></td></tr>
+<tr class="separator:ad794f236157f4a6c78772e35de467d32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3feff9b846c94ca61c6e2e42ff31d779"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test_8c.html#a3feff9b846c94ca61c6e2e42ff31d779">SelectRelationship</a> (unsigned int *blk, Buffer *buf, TempArray *tempR, TempArray *tempS)</td></tr>
+<tr class="memdesc:a3feff9b846c94ca61c6e2e42ff31d779"><td class="mdescLeft">&#160;</td><td class="mdescRight">选择关系 线性搜索 二元搜索 索引算法 结果存放磁盘  <a href="#a3feff9b846c94ca61c6e2e42ff31d779">更多...</a><br /></td></tr>
+<tr class="separator:a3feff9b846c94ca61c6e2e42ff31d779"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd56c4e9edc15184d94ed095d812ab13"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test_8c.html#acd56c4e9edc15184d94ed095d812ab13">Binary</a> (int num, TempArray *temp, int len)</td></tr>
+<tr class="memdesc:acd56c4e9edc15184d94ed095d812ab13"><td class="mdescLeft">&#160;</td><td class="mdescRight">BinarySearch 二分搜索  <a href="#acd56c4e9edc15184d94ed095d812ab13">更多...</a><br /></td></tr>
+<tr class="separator:acd56c4e9edc15184d94ed095d812ab13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a566652d2aad90375e36376daf9d9fd27"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test_8c.html#a566652d2aad90375e36376daf9d9fd27">BinarySearch</a> (unsigned int *blk, Buffer *buf, TempArray *tempR, TempArray *tempS)</td></tr>
+<tr class="memdesc:a566652d2aad90375e36376daf9d9fd27"><td class="mdescLeft">&#160;</td><td class="mdescRight">BinarySearch 二分搜索  <a href="#a566652d2aad90375e36376daf9d9fd27">更多...</a><br /></td></tr>
+<tr class="separator:a566652d2aad90375e36376daf9d9fd27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9459d99cd9e49ae10b9eab3e80a377a"><td class="memItemLeft" align="right" valign="top">index *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test_8c.html#ab9459d99cd9e49ae10b9eab3e80a377a">CreateIndex</a> (unsigned int *blk, Buffer *buf, TempArray *temp, int addr, int len)</td></tr>
+<tr class="memdesc:ab9459d99cd9e49ae10b9eab3e80a377a"><td class="mdescLeft">&#160;</td><td class="mdescRight">创建索引 CreateIndex  <a href="#ab9459d99cd9e49ae10b9eab3e80a377a">更多...</a><br /></td></tr>
+<tr class="separator:ab9459d99cd9e49ae10b9eab3e80a377a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa62ca305fc28b05c0b38eda1fe988775"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test_8c.html#aa62ca305fc28b05c0b38eda1fe988775">IndexSearch</a> (unsigned int *blk, Buffer *buf, TempArray *tempR, TempArray *tempS)</td></tr>
+<tr class="memdesc:aa62ca305fc28b05c0b38eda1fe988775"><td class="mdescLeft">&#160;</td><td class="mdescRight">索引算法 IndexSearch 索引搜索  <a href="#aa62ca305fc28b05c0b38eda1fe988775">更多...</a><br /></td></tr>
+<tr class="separator:aa62ca305fc28b05c0b38eda1fe988775"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a543ab8499ab4b2bb1badb7bc194c2542"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test_8c.html#a543ab8499ab4b2bb1badb7bc194c2542">MappingRelationship</a> (unsigned int *blk, Buffer *buf)</td></tr>
+<tr class="memdesc:a543ab8499ab4b2bb1badb7bc194c2542"><td class="mdescLeft">&#160;</td><td class="mdescRight">投影关系 实现关系投影，并存储在磁盘上  <a href="#a543ab8499ab4b2bb1badb7bc194c2542">更多...</a><br /></td></tr>
+<tr class="separator:a543ab8499ab4b2bb1badb7bc194c2542"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a374d72c089a6a7a7b3c9ad4e5cb03954"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test_8c.html#a374d72c089a6a7a7b3c9ad4e5cb03954">Merge</a> (unsigned int left, int ln, unsigned int right, int rn, Buffer *buf, int addr)</td></tr>
+<tr class="memdesc:a374d72c089a6a7a7b3c9ad4e5cb03954"><td class="mdescLeft">&#160;</td><td class="mdescRight">归并 Merge  <a href="#a374d72c089a6a7a7b3c9ad4e5cb03954">更多...</a><br /></td></tr>
+<tr class="separator:a374d72c089a6a7a7b3c9ad4e5cb03954"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5dc8649947f63a62fea8bd004eaaa4e"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test_8c.html#ac5dc8649947f63a62fea8bd004eaaa4e">Exsort</a> (unsigned int saddr, int n, Buffer *buf, int addr)</td></tr>
+<tr class="memdesc:ac5dc8649947f63a62fea8bd004eaaa4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">归并 Exsort  <a href="#ac5dc8649947f63a62fea8bd004eaaa4e">更多...</a><br /></td></tr>
+<tr class="separator:ac5dc8649947f63a62fea8bd004eaaa4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc412b5a2a816162cc57a520cf905fcb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test_8c.html#abc412b5a2a816162cc57a520cf905fcb">ConnectRelationship</a> (unsigned int *blk, Buffer *buf, TempArray *tempR, TempArray *tempS)</td></tr>
+<tr class="memdesc:abc412b5a2a816162cc57a520cf905fcb"><td class="mdescLeft">&#160;</td><td class="mdescRight">连接关系 Nst_Loop_Join算法 Sort_Merge_Join算法 Hash_Join算法 结果存放磁盘  <a href="#abc412b5a2a816162cc57a520cf905fcb">更多...</a><br /></td></tr>
+<tr class="separator:abc412b5a2a816162cc57a520cf905fcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab28353aa39112710238ead96fb80a133"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test_8c.html#ab28353aa39112710238ead96fb80a133">Nst_Loop_Join</a> (unsigned int *blk, Buffer *buf)</td></tr>
+<tr class="memdesc:ab28353aa39112710238ead96fb80a133"><td class="mdescLeft">&#160;</td><td class="mdescRight">Nst_Loop_Join  <a href="#ab28353aa39112710238ead96fb80a133">更多...</a><br /></td></tr>
+<tr class="separator:ab28353aa39112710238ead96fb80a133"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff4fbcc46817b66d0c9f9c83eef5e854"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test_8c.html#aff4fbcc46817b66d0c9f9c83eef5e854">Sort_Merge_Join</a> (unsigned int *blk, Buffer *buf, TempArray *tempR, TempArray *tempS)</td></tr>
+<tr class="memdesc:aff4fbcc46817b66d0c9f9c83eef5e854"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sort_Merge_Join Sort_Merge_Join  <a href="#aff4fbcc46817b66d0c9f9c83eef5e854">更多...</a><br /></td></tr>
+<tr class="separator:aff4fbcc46817b66d0c9f9c83eef5e854"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6dadee14445b54db70973e9a37eea85"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test_8c.html#ae6dadee14445b54db70973e9a37eea85">Hash_Join</a> (unsigned int *blk, Buffer *buf, TempArray *tempR, TempArray *tempS, int addr)</td></tr>
+<tr class="memdesc:ae6dadee14445b54db70973e9a37eea85"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hash_Join Hash_Join  <a href="#ae6dadee14445b54db70973e9a37eea85">更多...</a><br /></td></tr>
+<tr class="separator:ae6dadee14445b54db70973e9a37eea85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afebbcbf183ab5513d735540d749b7542"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test_8c.html#afebbcbf183ab5513d735540d749b7542">CollectionRelationship</a> (unsigned int *blk, Buffer *buf)</td></tr>
+<tr class="memdesc:afebbcbf183ab5513d735540d749b7542"><td class="mdescLeft">&#160;</td><td class="mdescRight">集合操作 并、交、差  <a href="#afebbcbf183ab5513d735540d749b7542">更多...</a><br /></td></tr>
+<tr class="separator:afebbcbf183ab5513d735540d749b7542"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a573044d57d323e23fa9bee3e60b5ea2d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test_8c.html#a573044d57d323e23fa9bee3e60b5ea2d">CalculationIntersection</a> (unsigned int *blk, Buffer *buf, TempArray *temp)</td></tr>
+<tr class="memdesc:a573044d57d323e23fa9bee3e60b5ea2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">CalculationIntersection 集合的交集  <a href="#a573044d57d323e23fa9bee3e60b5ea2d">更多...</a><br /></td></tr>
+<tr class="separator:a573044d57d323e23fa9bee3e60b5ea2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6164397c9ec5c6a703e51079ad266e5c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test_8c.html#a6164397c9ec5c6a703e51079ad266e5c">UnionOfRelation</a> (unsigned int *blk, Buffer *buf, TempArray *temp)</td></tr>
+<tr class="memdesc:a6164397c9ec5c6a703e51079ad266e5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">UnionOfRelation R S的并，去重  <a href="#a6164397c9ec5c6a703e51079ad266e5c">更多...</a><br /></td></tr>
+<tr class="separator:a6164397c9ec5c6a703e51079ad266e5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd3199bbbc667af75ba003d22956ff55"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test_8c.html#abd3199bbbc667af75ba003d22956ff55">IntersectionOfRelation</a> (unsigned int *blk, Buffer *buf, TempArray *temp)</td></tr>
+<tr class="memdesc:abd3199bbbc667af75ba003d22956ff55"><td class="mdescLeft">&#160;</td><td class="mdescRight">IntersectionOfRelation R S的交  <a href="#abd3199bbbc667af75ba003d22956ff55">更多...</a><br /></td></tr>
+<tr class="separator:abd3199bbbc667af75ba003d22956ff55"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1bf346d20917bf22802550b13c12001e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test_8c.html#a1bf346d20917bf22802550b13c12001e">DifferenceOfRelation</a> (unsigned int *blk, Buffer *buf, TempArray *temp)</td></tr>
+<tr class="memdesc:a1bf346d20917bf22802550b13c12001e"><td class="mdescLeft">&#160;</td><td class="mdescRight">DifferenceOfRelation R和S的差集  <a href="#a1bf346d20917bf22802550b13c12001e">更多...</a><br /></td></tr>
+<tr class="separator:a1bf346d20917bf22802550b13c12001e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft" align="right" valign="top"><a id="ae66f6b31b5ad750f1fe042a706a4e3d4"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>main</b> ()</td></tr>
+<tr class="separator:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02257dee8ef4003bcb3205d3427ad700"><td class="memItemLeft" align="right" valign="top">TempArray **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test_8c.html#a02257dee8ef4003bcb3205d3427ad700">FillBucket</a> (unsigned int *blk, Buffer *buf, int addr, int block_len)</td></tr>
+<tr class="memdesc:a02257dee8ef4003bcb3205d3427ad700"><td class="mdescLeft">&#160;</td><td class="mdescRight">FillBucket 填充桶  <a href="#a02257dee8ef4003bcb3205d3427ad700">更多...</a><br /></td></tr>
+<tr class="separator:a02257dee8ef4003bcb3205d3427ad700"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+变量</h2></td></tr>
+<tr class="memitem:a2d0bbeedebacf2cad568bacdee700aa3"><td class="memItemLeft" align="right" valign="top"><a id="a2d0bbeedebacf2cad568bacdee700aa3"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>bucketR</b> [5]</td></tr>
+<tr class="separator:a2d0bbeedebacf2cad568bacdee700aa3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a826bb600d84ddaf01efb875f645d5e0a"><td class="memItemLeft" align="right" valign="top"><a id="a826bb600d84ddaf01efb875f645d5e0a"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>bucketS</b> [5]</td></tr>
+<tr class="separator:a826bb600d84ddaf01efb875f645d5e0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab80fdf775a7bc4b0fd35d80f910e0e1"><td class="memItemLeft" align="right" valign="top"><a id="aab80fdf775a7bc4b0fd35d80f910e0e1"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>index_countR</b> =0</td></tr>
+<tr class="separator:aab80fdf775a7bc4b0fd35d80f910e0e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11692514016e5146885a1fa5b7cb57fc"><td class="memItemLeft" align="right" valign="top"><a id="a11692514016e5146885a1fa5b7cb57fc"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>index_countS</b> =0</td></tr>
+<tr class="separator:a11692514016e5146885a1fa5b7cb57fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0297608ded6cb378a4b8ca622b290d9c"><td class="memItemLeft" align="right" valign="top"><a id="a0297608ded6cb378a4b8ca622b290d9c"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>temp_count</b> =0</td></tr>
+<tr class="separator:a0297608ded6cb378a4b8ca622b290d9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ddaef06030c82e4fdada9198d87090b"><td class="memItemLeft" align="right" valign="top"><a id="a2ddaef06030c82e4fdada9198d87090b"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>tempflag</b> =0</td></tr>
+<tr class="separator:a2ddaef06030c82e4fdada9198d87090b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f2344ff1c0e7f4051e41d2f3450a471"><td class="memItemLeft" align="right" valign="top"><a id="a4f2344ff1c0e7f4051e41d2f3450a471"></a>
+TempArray **&#160;</td><td class="memItemRight" valign="bottom"><b>BucketR</b></td></tr>
+<tr class="separator:a4f2344ff1c0e7f4051e41d2f3450a471"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a7f5580d809c3fdd00af83214eeeccf"><td class="memItemLeft" align="right" valign="top"><a id="a1a7f5580d809c3fdd00af83214eeeccf"></a>
+TempArray **&#160;</td><td class="memItemRight" valign="bottom"><b>BucketS</b></td></tr>
+<tr class="separator:a1a7f5580d809c3fdd00af83214eeeccf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>Tools for experiment 4 </p>
+<dl class="section author"><dt>作者</dt><dd>Jiahan Shi </dd></dl>
+</div><h2 class="groupheader">函数说明</h2>
+<a id="acd56c4e9edc15184d94ed095d812ab13"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd56c4e9edc15184d94ed095d812ab13">&#9670;&nbsp;</a></span>Binary()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Binary </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>num</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">TempArray *&#160;</td>
+          <td class="paramname"><em>temp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>BinarySearch 二分搜索 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">int</td><td>num 查找的key值 </td></tr>
+    <tr><td class="paramname">TempArray</td><td>*temp 数据 </td></tr>
+    <tr><td class="paramname">int</td><td>len 元组数目 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>int 返回查找元组所在的位置 </dd></dl>
+
+</div>
+</div>
+<a id="a566652d2aad90375e36376daf9d9fd27"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a566652d2aad90375e36376daf9d9fd27">&#9670;&nbsp;</a></span>BinarySearch()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BinarySearch </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int *&#160;</td>
+          <td class="paramname"><em>blk</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Buffer *&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">TempArray *&#160;</td>
+          <td class="paramname"><em>tempR</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">TempArray *&#160;</td>
+          <td class="paramname"><em>tempS</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>BinarySearch 二分搜索 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">unsigned</td><td>int * blk </td></tr>
+    <tr><td class="paramname">Buffer</td><td>*buf </td></tr>
+    <tr><td class="paramname">TempArray</td><td>*tempR R元组 </td></tr>
+    <tr><td class="paramname">TempArray</td><td>*tempS S元组 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="a573044d57d323e23fa9bee3e60b5ea2d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a573044d57d323e23fa9bee3e60b5ea2d">&#9670;&nbsp;</a></span>CalculationIntersection()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CalculationIntersection </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int *&#160;</td>
+          <td class="paramname"><em>blk</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Buffer *&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">TempArray *&#160;</td>
+          <td class="paramname"><em>temp</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>CalculationIntersection 集合的交集 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">unsigned</td><td>int *blk </td></tr>
+    <tr><td class="paramname">Buffer</td><td>*buf </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>TempArray *temp </dd></dl>
+
+</div>
+</div>
+<a id="afebbcbf183ab5513d735540d749b7542"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afebbcbf183ab5513d735540d749b7542">&#9670;&nbsp;</a></span>CollectionRelationship()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CollectionRelationship </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int *&#160;</td>
+          <td class="paramname"><em>blk</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Buffer *&#160;</td>
+          <td class="paramname"><em>buf</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>集合操作 并、交、差 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">unsigned</td><td>int * blk </td></tr>
+    <tr><td class="paramname">Buffer</td><td>*buf </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a id="abc412b5a2a816162cc57a520cf905fcb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc412b5a2a816162cc57a520cf905fcb">&#9670;&nbsp;</a></span>ConnectRelationship()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ConnectRelationship </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int *&#160;</td>
+          <td class="paramname"><em>blk</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Buffer *&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">TempArray *&#160;</td>
+          <td class="paramname"><em>tempR</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">TempArray *&#160;</td>
+          <td class="paramname"><em>tempS</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>连接关系 Nst_Loop_Join算法 Sort_Merge_Join算法 Hash_Join算法 结果存放磁盘 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">unsigned</td><td>int * blk </td></tr>
+    <tr><td class="paramname">Buffer</td><td>*buf </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a id="ab9459d99cd9e49ae10b9eab3e80a377a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9459d99cd9e49ae10b9eab3e80a377a">&#9670;&nbsp;</a></span>CreateIndex()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">index * CreateIndex </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int *&#160;</td>
+          <td class="paramname"><em>blk</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Buffer *&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">TempArray *&#160;</td>
+          <td class="paramname"><em>temp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>addr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>创建索引 CreateIndex </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">TempArray</td><td>*temp 对temp创建索引 </td></tr>
+    <tr><td class="paramname">int</td><td>addr 索引存储的块号 </td></tr>
+    <tr><td class="paramname">int</td><td>len 块数 </td></tr>
+    <tr><td class="paramname">unsigned</td><td>int *blk </td></tr>
+    <tr><td class="paramname">Buffer</td><td>*buf </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>index* 返回创建的索引 </dd></dl>
+
+</div>
+</div>
+<a id="a1bf346d20917bf22802550b13c12001e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1bf346d20917bf22802550b13c12001e">&#9670;&nbsp;</a></span>DifferenceOfRelation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DifferenceOfRelation </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int *&#160;</td>
+          <td class="paramname"><em>blk</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Buffer *&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">TempArray *&#160;</td>
+          <td class="paramname"><em>temp</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>DifferenceOfRelation R和S的差集 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">unsigned</td><td>int *blk </td></tr>
+    <tr><td class="paramname">Buffer</td><td>*buf </td></tr>
+    <tr><td class="paramname">TempArray</td><td>*temp </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a id="ac5dc8649947f63a62fea8bd004eaaa4e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5dc8649947f63a62fea8bd004eaaa4e">&#9670;&nbsp;</a></span>Exsort()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int Exsort </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>saddr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Buffer *&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>addr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>归并 Exsort </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">unsigned</td><td>int saddr </td></tr>
+    <tr><td class="paramname">int</td><td>n </td></tr>
+    <tr><td class="paramname">Buffer</td><td>*buf </td></tr>
+    <tr><td class="paramname">int</td><td>addr </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>unsigned int </dd></dl>
+<p>complete sorting </p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="test_8c_ac5dc8649947f63a62fea8bd004eaaa4e_cgraph.png" border="0" usemap="#test_8c_ac5dc8649947f63a62fea8bd004eaaa4e_cgraph" alt=""/></div>
+<map name="test_8c_ac5dc8649947f63a62fea8bd004eaaa4e_cgraph" id="test_8c_ac5dc8649947f63a62fea8bd004eaaa4e_cgraph">
+<area shape="rect"  title="å½å¹¶ Exsort" alt="" coords="5,5,64,31"/>
+<area shape="rect"  href="test_8c.html#a374d72c089a6a7a7b3c9ad4e5cb03954" title="å½å¹¶ Merge" alt="" coords="112,5,172,31"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a02257dee8ef4003bcb3205d3427ad700"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02257dee8ef4003bcb3205d3427ad700">&#9670;&nbsp;</a></span>FillBucket()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TempArray** FillBucket </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int *&#160;</td>
+          <td class="paramname"><em>blk</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Buffer *&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>addr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>block_len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>FillBucket 填充桶 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">unsigned</td><td>int *blk </td></tr>
+    <tr><td class="paramname">Buffer</td><td>*buf </td></tr>
+    <tr><td class="paramname">int</td><td>addr 块起始地址 </td></tr>
+    <tr><td class="paramname">int</td><td>block_len 块数目 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>TempArray ** </dd></dl>
+
+</div>
+</div>
+<a id="ae6dadee14445b54db70973e9a37eea85"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6dadee14445b54db70973e9a37eea85">&#9670;&nbsp;</a></span>Hash_Join()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Hash_Join </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int *&#160;</td>
+          <td class="paramname"><em>blk</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Buffer *&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">TempArray *&#160;</td>
+          <td class="paramname"><em>tempR</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">TempArray *&#160;</td>
+          <td class="paramname"><em>tempS</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>addr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Hash_Join Hash_Join </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">unsigned</td><td>int *blk </td></tr>
+    <tr><td class="paramname">Buffer</td><td>*buf </td></tr>
+    <tr><td class="paramname">TempArray</td><td>*tempR R元组 </td></tr>
+    <tr><td class="paramname">TempArray</td><td>*tempS S元组 </td></tr>
+    <tr><td class="paramname">int</td><td>addr hash_join结果存储块起始地址 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a id="aa62ca305fc28b05c0b38eda1fe988775"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa62ca305fc28b05c0b38eda1fe988775">&#9670;&nbsp;</a></span>IndexSearch()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void IndexSearch </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int *&#160;</td>
+          <td class="paramname"><em>blk</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Buffer *&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">TempArray *&#160;</td>
+          <td class="paramname"><em>tempR</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">TempArray *&#160;</td>
+          <td class="paramname"><em>tempS</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>索引算法 IndexSearch 索引搜索 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">unsigned</td><td>int * blk </td></tr>
+    <tr><td class="paramname">Buffer</td><td>*buf </td></tr>
+    <tr><td class="paramname">TempArray</td><td>*tempR R元组 </td></tr>
+    <tr><td class="paramname">TempArray</td><td>*tempS S元组 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a id="abd3199bbbc667af75ba003d22956ff55"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd3199bbbc667af75ba003d22956ff55">&#9670;&nbsp;</a></span>IntersectionOfRelation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void IntersectionOfRelation </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int *&#160;</td>
+          <td class="paramname"><em>blk</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Buffer *&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">TempArray *&#160;</td>
+          <td class="paramname"><em>temp</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>IntersectionOfRelation R S的交 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">unsigned</td><td>int *blk </td></tr>
+    <tr><td class="paramname">Buffer</td><td>*buf </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a id="a33520b9569d0a278ea549603cea0ab9c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33520b9569d0a278ea549603cea0ab9c">&#9670;&nbsp;</a></span>loadData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TempArray * loadData </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int *&#160;</td>
+          <td class="paramname"><em>blk</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Buffer *&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>len</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>addr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>templen</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>读取数据 loadData 读取块中数据到TempArray </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">unsigned</td><td>int * blk </td></tr>
+    <tr><td class="paramname">Buffer</td><td>* buf </td></tr>
+    <tr><td class="paramname">int</td><td>len 块号数 </td></tr>
+    <tr><td class="paramname">int</td><td>addr 起始块号 </td></tr>
+    <tr><td class="paramname">int</td><td>templen 元组最大数目 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>TempArray * </dd></dl>
+
+</div>
+</div>
+<a id="a543ab8499ab4b2bb1badb7bc194c2542"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a543ab8499ab4b2bb1badb7bc194c2542">&#9670;&nbsp;</a></span>MappingRelationship()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MappingRelationship </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int *&#160;</td>
+          <td class="paramname"><em>blk</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Buffer *&#160;</td>
+          <td class="paramname"><em>buf</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>投影关系 实现关系投影，并存储在磁盘上 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">unsigned</td><td>int * blk </td></tr>
+    <tr><td class="paramname">Buffer</td><td>*buf </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>void </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="test_8c_a543ab8499ab4b2bb1badb7bc194c2542_cgraph.png" border="0" usemap="#test_8c_a543ab8499ab4b2bb1badb7bc194c2542_cgraph" alt=""/></div>
+<map name="test_8c_a543ab8499ab4b2bb1badb7bc194c2542_cgraph" id="test_8c_a543ab8499ab4b2bb1badb7bc194c2542_cgraph">
+<area shape="rect"  title="æå½±å³ç³» å®ç°å³ç³»æå½±ï¼å¹¶å­å¨å¨ç£çä¸" alt="" coords="5,5,151,31"/>
+<area shape="rect"  href="test_8c.html#ac5dc8649947f63a62fea8bd004eaaa4e" title="å½å¹¶ Exsort" alt="" coords="199,5,258,31"/>
+<area shape="rect"  href="test_8c.html#a374d72c089a6a7a7b3c9ad4e5cb03954" title="å½å¹¶ Merge" alt="" coords="306,5,365,31"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a374d72c089a6a7a7b3c9ad4e5cb03954"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a374d72c089a6a7a7b3c9ad4e5cb03954">&#9670;&nbsp;</a></span>Merge()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int Merge </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>left</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>ln</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>right</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>rn</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Buffer *&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>addr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>归并 Merge </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">unsigned</td><td>int left </td></tr>
+    <tr><td class="paramname">int</td><td>ln </td></tr>
+    <tr><td class="paramname">unsigned</td><td>int right </td></tr>
+    <tr><td class="paramname">int</td><td>rn </td></tr>
+    <tr><td class="paramname">Buffer</td><td>*buf </td></tr>
+    <tr><td class="paramname">int</td><td>addr </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>unsigned int </dd></dl>
+
+</div>
+</div>
+<a id="ab28353aa39112710238ead96fb80a133"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab28353aa39112710238ead96fb80a133">&#9670;&nbsp;</a></span>Nst_Loop_Join()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Nst_Loop_Join </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int *&#160;</td>
+          <td class="paramname"><em>blk</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Buffer *&#160;</td>
+          <td class="paramname"><em>buf</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Nst_Loop_Join </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">unsigned</td><td>int * blk </td></tr>
+    <tr><td class="paramname">Buffer</td><td>*buf </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>void </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="test_8c_ab28353aa39112710238ead96fb80a133_cgraph.png" border="0" usemap="#test_8c_ab28353aa39112710238ead96fb80a133_cgraph" alt=""/></div>
+<map name="test_8c_ab28353aa39112710238ead96fb80a133_cgraph" id="test_8c_ab28353aa39112710238ead96fb80a133_cgraph">
+<area shape="rect"  title="Nst_Loop_Join" alt="" coords="5,5,116,31"/>
+<area shape="rect"  href="test_8c.html#aa783f2e9b7eef927a5bcbb611f702f5b" title="OutputData æå°å­å¨çæ°æ®" alt="" coords="164,5,253,31"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aa783f2e9b7eef927a5bcbb611f702f5b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa783f2e9b7eef927a5bcbb611f702f5b">&#9670;&nbsp;</a></span>OutputData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OutputData </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>beginAddr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int *&#160;</td>
+          <td class="paramname"><em>blk</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Buffer *&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>flag</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>OutputData 打印存储的数据 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">int</td><td>beginAddr 块号起始地址 </td></tr>
+    <tr><td class="paramname">int</td><td>n 块数目 </td></tr>
+    <tr><td class="paramname">unsigned</td><td>int *blk </td></tr>
+    <tr><td class="paramname">Buffer</td><td>*buf </td></tr>
+    <tr><td class="paramname">int</td><td>flag 标记是R\S </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a id="aff93774519eb65789b7b10888c4c8a19"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff93774519eb65789b7b10888c4c8a19">&#9670;&nbsp;</a></span>Random()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Random </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>low</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>high</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>生成随机数 Random 生成low-high之间的随机数 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">int</td><td>low </td></tr>
+    <tr><td class="paramname">int</td><td>high </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>int </dd></dl>
+
+</div>
+</div>
+<a id="a3feff9b846c94ca61c6e2e42ff31d779"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3feff9b846c94ca61c6e2e42ff31d779">&#9670;&nbsp;</a></span>SelectRelationship()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SelectRelationship </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int *&#160;</td>
+          <td class="paramname"><em>blk</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Buffer *&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">TempArray *&#160;</td>
+          <td class="paramname"><em>tempR</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">TempArray *&#160;</td>
+          <td class="paramname"><em>tempS</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>选择关系 线性搜索 二元搜索 索引算法 结果存放磁盘 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">unsigned</td><td>int * blk </td></tr>
+    <tr><td class="paramname">Buffer</td><td>*buf </td></tr>
+    <tr><td class="paramname">TempArray</td><td>*tempR </td></tr>
+    <tr><td class="paramname">TempArray</td><td>*tempS </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a id="ad794f236157f4a6c78772e35de467d32"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad794f236157f4a6c78772e35de467d32">&#9670;&nbsp;</a></span>sort()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TempArray * sort </td>
+          <td>(</td>
+          <td class="paramtype">TempArray *&#160;</td>
+          <td class="paramname"><em>temp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>排序 sort简单冒泡排序 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">TempArray</td><td>*temp 对temp排序 </td></tr>
+    <tr><td class="paramname">int</td><td>len 排序元组数目 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>TempArray * </dd></dl>
+
+</div>
+</div>
+<a id="aff4fbcc46817b66d0c9f9c83eef5e854"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff4fbcc46817b66d0c9f9c83eef5e854">&#9670;&nbsp;</a></span>Sort_Merge_Join()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Sort_Merge_Join </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int *&#160;</td>
+          <td class="paramname"><em>blk</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Buffer *&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">TempArray *&#160;</td>
+          <td class="paramname"><em>tempR</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">TempArray *&#160;</td>
+          <td class="paramname"><em>tempS</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sort_Merge_Join Sort_Merge_Join </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">unsigned</td><td>int * blk </td></tr>
+    <tr><td class="paramname">Buffer</td><td>*buf </td></tr>
+    <tr><td class="paramname">TempArray</td><td>*tempR </td></tr>
+    <tr><td class="paramname">TempArray</td><td>*tempS </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a id="a530f84eb94411e5e6173fc6b81812594"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a530f84eb94411e5e6173fc6b81812594">&#9670;&nbsp;</a></span>storeData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void storeData </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int *&#160;</td>
+          <td class="paramname"><em>blk</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Buffer *&#160;</td>
+          <td class="paramname"><em>buf</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>存储数据 storeData 随机生成的数据存储 R 0-15 S 20-51 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">unsigned</td><td>int *blk </td></tr>
+    <tr><td class="paramname">Buffer</td><td>* buf </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>void </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="test_8c_a530f84eb94411e5e6173fc6b81812594_cgraph.png" border="0" usemap="#test_8c_a530f84eb94411e5e6173fc6b81812594_cgraph" alt=""/></div>
+<map name="test_8c_a530f84eb94411e5e6173fc6b81812594_cgraph" id="test_8c_a530f84eb94411e5e6173fc6b81812594_cgraph">
+<area shape="rect"  title="å­å¨æ°æ® storeData éæºçæçæ°æ®å­å¨ R 0&#45;15 S 20&#45;51" alt="" coords="5,5,84,31"/>
+<area shape="rect"  href="test_8c.html#aff93774519eb65789b7b10888c4c8a19" title="çæéæºæ° Random çælow&#45;highä¹é´çéæºæ°" alt="" coords="132,5,204,31"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a6164397c9ec5c6a703e51079ad266e5c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6164397c9ec5c6a703e51079ad266e5c">&#9670;&nbsp;</a></span>UnionOfRelation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnionOfRelation </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int *&#160;</td>
+          <td class="paramname"><em>blk</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Buffer *&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">TempArray *&#160;</td>
+          <td class="paramname"><em>temp</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>UnionOfRelation R S的并，去重 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">unsigned</td><td>int * blk </td></tr>
+    <tr><td class="paramname">Buffer</td><td>*buf </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>void </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.15
+</small></address>
+</body>
+</html>

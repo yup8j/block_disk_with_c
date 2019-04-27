@@ -1,0 +1,191 @@
+\hypertarget{utils_8h}{}\section{utils.\+h 文件参考}
+\label{utils_8h}\index{utils.h@{utils.h}}
+
+
+Tools for experiment 4  
+
+
+{\ttfamily \#include \char`\"{}extmem.\+h\char`\"{}}\newline
+utils.\+h 的引用(Include)关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=140pt]{utils_8h__incl}
+\end{center}
+\end{figure}
+此图展示该文件直接或间接的被哪些文件引用了\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=210pt]{utils_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{宏定义}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{utils_8h_a392fb874e547e582e9c66a08a1f23326}\label{utils_8h_a392fb874e547e582e9c66a08a1f23326}} 
+\#define {\bfseries M\+AX}~100000
+\item 
+\mbox{\Hypertarget{utils_8h_a6b20d41d6252e9871430c242cb1a56e7}\label{utils_8h_a6b20d41d6252e9871430c242cb1a56e7}} 
+\#define {\bfseries B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE}~520
+\item 
+\mbox{\Hypertarget{utils_8h_ad51ded0bbd705f02f73fc60c0b721ced}\label{utils_8h_ad51ded0bbd705f02f73fc60c0b721ced}} 
+\#define {\bfseries B\+L\+O\+C\+K\+\_\+\+S\+I\+ZE}~64
+\item 
+\mbox{\Hypertarget{utils_8h_ac16e51f6c599534f2cdd80d7c5f31c82}\label{utils_8h_ac16e51f6c599534f2cdd80d7c5f31c82}} 
+\#define {\bfseries B\+A\+S\+E\+\_\+\+V\+A\+L\+UE}~0
+\item 
+\mbox{\Hypertarget{utils_8h_a9c2ff9d2bcdb425c88524b316707df3c}\label{utils_8h_a9c2ff9d2bcdb425c88524b316707df3c}} 
+\#define {\bfseries S\+E\+A\+R\+C\+H\+\_\+\+B\+A\+SE}~100000
+\item 
+\mbox{\Hypertarget{utils_8h_a977402edd38a3a6c7d26323302cc677c}\label{utils_8h_a977402edd38a3a6c7d26323302cc677c}} 
+\#define {\bfseries M\+E\+R\+G\+E\+\_\+\+B\+A\+SE}~200000
+\item 
+\mbox{\Hypertarget{utils_8h_a9897e3147077ac9610a13b1ef4f7581f}\label{utils_8h_a9897e3147077ac9610a13b1ef4f7581f}} 
+\#define {\bfseries J\+O\+I\+N\+\_\+\+B\+A\+SE}~300000
+\item 
+\mbox{\Hypertarget{utils_8h_a69f312288708a1bfb0f4a2b6c5634e5e}\label{utils_8h_a69f312288708a1bfb0f4a2b6c5634e5e}} 
+\#define {\bfseries T\+M\+P\+\_\+\+B\+A\+SE}~400000
+\item 
+\mbox{\Hypertarget{utils_8h_a54c7dc07b04529bc7260130866a7dcff}\label{utils_8h_a54c7dc07b04529bc7260130866a7dcff}} 
+\#define {\bfseries A\+N\+Y\+\_\+\+B\+A\+SE}~500000
+\item 
+\mbox{\Hypertarget{utils_8h_a9d0bc70c046ce66e31ba2b71f52f064f}\label{utils_8h_a9d0bc70c046ce66e31ba2b71f52f064f}} 
+\#define {\bfseries I\+N\+D\+E\+X\+\_\+\+B\+A\+S\+E\+\_\+R}~600000
+\item 
+\mbox{\Hypertarget{utils_8h_a5990957d4f118caee1ce5a8aa6ef7b38}\label{utils_8h_a5990957d4f118caee1ce5a8aa6ef7b38}} 
+\#define {\bfseries I\+N\+D\+E\+X\+\_\+\+B\+A\+S\+E\+\_\+S}~700000
+\end{DoxyCompactItemize}
+\subsection*{函数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{utils_8h_a99d337a18961e416f796ee1fb1ae0d2d}{init\+\_\+buf}} (Buffer $\ast$buf)
+\item 
+int \mbox{\hyperlink{utils_8h_a0c16da57d6c03d4cb1f73049b4d6a0cf}{get\+\_\+a\+\_\+data}} (int low, int high)
+\item 
+void \mbox{\hyperlink{utils_8h_a230c7041749b017fa6ca5d6497307e47}{save}} (unsigned char $\ast$blk, int num)
+\item 
+int \mbox{\hyperlink{utils_8h_addbaf603816f5fceeefc6fa9d7e575aa}{get\+\_\+next\+\_\+addr}} (int base)
+\item 
+void \mbox{\hyperlink{utils_8h_a0b1e3e9e2f057be5d4caf29f798311b5}{write\+\_\+blk}} (unsigned char $\ast$blk, unsigned int addr, Buffer $\ast$buf)
+\item 
+\mbox{\Hypertarget{utils_8h_aba3737507364172ecc93fbad8eab287c}\label{utils_8h_aba3737507364172ecc93fbad8eab287c}} 
+void {\bfseries read\+\_\+blk} (unsigned int addr, Buffer $\ast$buf, unsigned char $\ast$$\ast$blk)
+\item 
+int \mbox{\hyperlink{utils_8h_ae1c2a7f00a0154457407bba39dc0c3cd}{save\+\_\+start\+\_\+address}} (char $\ast$relation, char $\ast$col1, char $\ast$col2, int start\+\_\+addr)
+\item 
+\mbox{\Hypertarget{utils_8h_a8233bb5a11e12c6c1caabca96f725290}\label{utils_8h_a8233bb5a11e12c6c1caabca96f725290}} 
+int {\bfseries get\+\_\+start\+\_\+addr\+\_\+from\+\_\+file} (char $\ast$rel, char $\ast$col, int r\mbox{[}$\,$\mbox{]})
+\item 
+\mbox{\Hypertarget{utils_8h_a734593873835895694cde7ec525cdeff}\label{utils_8h_a734593873835895694cde7ec525cdeff}} 
+void {\bfseries save\+\_\+blk} (Buffer $\ast$buf, unsigned char $\ast$$\ast$des, unsigned char $\ast$from, int $\ast$index, int $\ast$save\+\_\+to)
+\end{DoxyCompactItemize}
+
+
+\subsection{详细描述}
+Tools for experiment 4 
+
+\begin{DoxyAuthor}{作者}
+Shi 
+\end{DoxyAuthor}
+\begin{DoxyDate}{日期}
+
+\end{DoxyDate}
+
+
+\subsection{函数说明}
+\mbox{\Hypertarget{utils_8h_a0c16da57d6c03d4cb1f73049b4d6a0cf}\label{utils_8h_a0c16da57d6c03d4cb1f73049b4d6a0cf}} 
+\index{utils.h@{utils.h}!get\_a\_data@{get\_a\_data}}
+\index{get\_a\_data@{get\_a\_data}!utils.h@{utils.h}}
+\subsubsection{\texorpdfstring{get\_a\_data()}{get\_a\_data()}}
+{\footnotesize\ttfamily int get\+\_\+a\+\_\+data (\begin{DoxyParamCaption}\item[{int}]{low,  }\item[{int}]{high }\end{DoxyParamCaption})}
+
+Create Random Data 
+\begin{DoxyParams}{参数}
+{\em low} & \\
+\hline
+{\em high} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+data 
+\end{DoxyReturn}
+\mbox{\Hypertarget{utils_8h_addbaf603816f5fceeefc6fa9d7e575aa}\label{utils_8h_addbaf603816f5fceeefc6fa9d7e575aa}} 
+\index{utils.h@{utils.h}!get\_next\_addr@{get\_next\_addr}}
+\index{get\_next\_addr@{get\_next\_addr}!utils.h@{utils.h}}
+\subsubsection{\texorpdfstring{get\_next\_addr()}{get\_next\_addr()}}
+{\footnotesize\ttfamily int get\+\_\+next\+\_\+addr (\begin{DoxyParamCaption}\item[{int}]{base }\end{DoxyParamCaption})}
+
+Generate a random address 
+\begin{DoxyParams}{参数}
+{\em base} & base address \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+random address 
+\end{DoxyReturn}
+\mbox{\Hypertarget{utils_8h_a99d337a18961e416f796ee1fb1ae0d2d}\label{utils_8h_a99d337a18961e416f796ee1fb1ae0d2d}} 
+\index{utils.h@{utils.h}!init\_buf@{init\_buf}}
+\index{init\_buf@{init\_buf}!utils.h@{utils.h}}
+\subsubsection{\texorpdfstring{init\_buf()}{init\_buf()}}
+{\footnotesize\ttfamily void init\+\_\+buf (\begin{DoxyParamCaption}\item[{Buffer $\ast$}]{buf }\end{DoxyParamCaption})}
+
+Init Buffer 
+\begin{DoxyParams}{参数}
+{\em buf} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{utils_8h_a230c7041749b017fa6ca5d6497307e47}\label{utils_8h_a230c7041749b017fa6ca5d6497307e47}} 
+\index{utils.h@{utils.h}!save@{save}}
+\index{save@{save}!utils.h@{utils.h}}
+\subsubsection{\texorpdfstring{save()}{save()}}
+{\footnotesize\ttfamily void save (\begin{DoxyParamCaption}\item[{unsigned char $\ast$}]{blk,  }\item[{int}]{num }\end{DoxyParamCaption})}
+
+Save to Block 
+\begin{DoxyParams}{参数}
+{\em blk} & \\
+\hline
+{\em num} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{utils_8h_ae1c2a7f00a0154457407bba39dc0c3cd}\label{utils_8h_ae1c2a7f00a0154457407bba39dc0c3cd}} 
+\index{utils.h@{utils.h}!save\_start\_address@{save\_start\_address}}
+\index{save\_start\_address@{save\_start\_address}!utils.h@{utils.h}}
+\subsubsection{\texorpdfstring{save\_start\_address()}{save\_start\_address()}}
+{\footnotesize\ttfamily int save\+\_\+start\+\_\+address (\begin{DoxyParamCaption}\item[{char $\ast$}]{relation,  }\item[{char $\ast$}]{col1,  }\item[{char $\ast$}]{col2,  }\item[{int}]{start\+\_\+addr }\end{DoxyParamCaption})}
+
+Save start address in relations 
+\begin{DoxyParams}{参数}
+{\em relation} & \\
+\hline
+{\em col1} & \\
+\hline
+{\em col2} & \\
+\hline
+{\em start\+\_\+addr} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{返回值}
+{\em -\/1} & Failed \\
+\hline
+{\em 0} & Success \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{utils_8h_a0b1e3e9e2f057be5d4caf29f798311b5}\label{utils_8h_a0b1e3e9e2f057be5d4caf29f798311b5}} 
+\index{utils.h@{utils.h}!write\_blk@{write\_blk}}
+\index{write\_blk@{write\_blk}!utils.h@{utils.h}}
+\subsubsection{\texorpdfstring{write\_blk()}{write\_blk()}}
+{\footnotesize\ttfamily void write\+\_\+blk (\begin{DoxyParamCaption}\item[{unsigned char $\ast$}]{blk,  }\item[{unsigned int}]{addr,  }\item[{Buffer $\ast$}]{buf }\end{DoxyParamCaption})}
+
+Write Block to Disk with checking 
+\begin{DoxyParams}{参数}
+{\em blk} & \\
+\hline
+{\em addr} & \\
+\hline
+{\em buf} & \\
+\hline
+\end{DoxyParams}

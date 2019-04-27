@@ -1,0 +1,349 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.15"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Database Experiment: utils.c 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Database Experiment
+   &#160;<span id="projectnumber">4</span>
+   </div>
+   <div id="projectbrief">2019Spring</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.15 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle">
+<div class="title">utils.c 文件参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Tools for experiment 4  
+<a href="#details">更多...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="utils_8h_source.html">utils.h</a>&quot;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &quot;extmem.h&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+utils.c 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="utils_8c__incl.png" border="0" usemap="#utils_8c" alt=""/></div>
+<map name="utils_8c" id="utils_8c">
+<area shape="rect"  title="Tools for experiment 4" alt="" coords="140,5,196,31"/>
+<area shape="rect"  href="utils_8h.html" title="Tools for experiment 4" alt="" coords="5,79,61,104"/>
+<area shape="rect"  href="extmem_8h_source.html" title=" " alt="" coords="25,152,105,177"/>
+<area shape="rect"  title=" " alt="" coords="136,79,200,104"/>
+<area shape="rect"  title=" " alt="" coords="224,79,285,104"/>
+<area shape="rect"  title=" " alt="" coords="309,79,374,104"/>
+<area shape="rect"  title=" " alt="" coords="31,225,100,251"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:a99d337a18961e416f796ee1fb1ae0d2d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utils_8c.html#a99d337a18961e416f796ee1fb1ae0d2d">init_buf</a> (Buffer *buf)</td></tr>
+<tr class="separator:a99d337a18961e416f796ee1fb1ae0d2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c16da57d6c03d4cb1f73049b4d6a0cf"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utils_8c.html#a0c16da57d6c03d4cb1f73049b4d6a0cf">get_a_data</a> (int low, int high)</td></tr>
+<tr class="separator:a0c16da57d6c03d4cb1f73049b4d6a0cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b1e3e9e2f057be5d4caf29f798311b5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utils_8c.html#a0b1e3e9e2f057be5d4caf29f798311b5">write_blk</a> (unsigned char *blk, unsigned int addr, Buffer *buf)</td></tr>
+<tr class="separator:a0b1e3e9e2f057be5d4caf29f798311b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba3737507364172ecc93fbad8eab287c"><td class="memItemLeft" align="right" valign="top"><a id="aba3737507364172ecc93fbad8eab287c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>read_blk</b> (unsigned int addr, Buffer *buf, unsigned char **blk)</td></tr>
+<tr class="separator:aba3737507364172ecc93fbad8eab287c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a230c7041749b017fa6ca5d6497307e47"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utils_8c.html#a230c7041749b017fa6ca5d6497307e47">save</a> (unsigned char *blk, int num)</td></tr>
+<tr class="separator:a230c7041749b017fa6ca5d6497307e47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:addbaf603816f5fceeefc6fa9d7e575aa"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utils_8c.html#addbaf603816f5fceeefc6fa9d7e575aa">get_next_addr</a> (int base)</td></tr>
+<tr class="separator:addbaf603816f5fceeefc6fa9d7e575aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1c2a7f00a0154457407bba39dc0c3cd"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utils_8c.html#ae1c2a7f00a0154457407bba39dc0c3cd">save_start_address</a> (char *relation, char *col1, char *col2, int start_addr)</td></tr>
+<tr class="separator:ae1c2a7f00a0154457407bba39dc0c3cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8233bb5a11e12c6c1caabca96f725290"><td class="memItemLeft" align="right" valign="top"><a id="a8233bb5a11e12c6c1caabca96f725290"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>get_start_addr_from_file</b> (char *rel, char *col, int r[])</td></tr>
+<tr class="separator:a8233bb5a11e12c6c1caabca96f725290"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a734593873835895694cde7ec525cdeff"><td class="memItemLeft" align="right" valign="top"><a id="a734593873835895694cde7ec525cdeff"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>save_blk</b> (Buffer *buf, unsigned char **des, unsigned char *from, int *index, int *save_to)</td></tr>
+<tr class="separator:a734593873835895694cde7ec525cdeff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>Tools for experiment 4 </p>
+<dl class="section author"><dt>作者</dt><dd>Jiahan Shi </dd></dl>
+</div><h2 class="groupheader">函数说明</h2>
+<a id="a0c16da57d6c03d4cb1f73049b4d6a0cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c16da57d6c03d4cb1f73049b4d6a0cf">&#9670;&nbsp;</a></span>get_a_data()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int get_a_data </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>low</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>high</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Create Random Data </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">low</td><td></td></tr>
+    <tr><td class="paramname">high</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>data </dd></dl>
+
+</div>
+</div>
+<a id="addbaf603816f5fceeefc6fa9d7e575aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#addbaf603816f5fceeefc6fa9d7e575aa">&#9670;&nbsp;</a></span>get_next_addr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int get_next_addr </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>base</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Generate a random address </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">base</td><td>base address </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>random address </dd></dl>
+
+</div>
+</div>
+<a id="a99d337a18961e416f796ee1fb1ae0d2d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99d337a18961e416f796ee1fb1ae0d2d">&#9670;&nbsp;</a></span>init_buf()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void init_buf </td>
+          <td>(</td>
+          <td class="paramtype">Buffer *&#160;</td>
+          <td class="paramname"><em>buf</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Init Buffer </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">buf</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a230c7041749b017fa6ca5d6497307e47"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a230c7041749b017fa6ca5d6497307e47">&#9670;&nbsp;</a></span>save()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void save </td>
+          <td>(</td>
+          <td class="paramtype">unsigned char *&#160;</td>
+          <td class="paramname"><em>blk</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>num</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Save to Block </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">blk</td><td></td></tr>
+    <tr><td class="paramname">num</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae1c2a7f00a0154457407bba39dc0c3cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1c2a7f00a0154457407bba39dc0c3cd">&#9670;&nbsp;</a></span>save_start_address()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int save_start_address </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>relation</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>col1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>col2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>start_addr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Save start address in relations </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">relation</td><td></td></tr>
+    <tr><td class="paramname">col1</td><td></td></tr>
+    <tr><td class="paramname">col2</td><td></td></tr>
+    <tr><td class="paramname">start_addr</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">-1</td><td>Failed </td></tr>
+    <tr><td class="paramname">0</td><td>Success </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a0b1e3e9e2f057be5d4caf29f798311b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b1e3e9e2f057be5d4caf29f798311b5">&#9670;&nbsp;</a></span>write_blk()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void write_blk </td>
+          <td>(</td>
+          <td class="paramtype">unsigned char *&#160;</td>
+          <td class="paramname"><em>blk</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>addr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Buffer *&#160;</td>
+          <td class="paramname"><em>buf</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Write Block to Disk with checking </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">blk</td><td></td></tr>
+    <tr><td class="paramname">addr</td><td></td></tr>
+    <tr><td class="paramname">buf</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.15
+</small></address>
+</body>
+</html>
