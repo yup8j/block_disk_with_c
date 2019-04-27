@@ -14,8 +14,10 @@ int main() {
     int num;
 //    read_data(0);
 //    create_data_main();
-    read_data(R_START);
+//    read_data(R_START);
 //    read_data(S_START);
+    nested_loop_join(R_START,S_START);
+    read_data(1+JOIN_START);
 //    linear_search(S_START,60);
 //    linear_search(R_START,40);
 //    project(R_START);

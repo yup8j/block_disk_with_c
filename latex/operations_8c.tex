@@ -12,8 +12,7 @@
 {\ttfamily \#include $<$stdio.\+h$>$}\newline
 {\ttfamily \#include $<$time.\+h$>$}\newline
 {\ttfamily \#include \char`\"{}extmem.\+h\char`\"{}}\newline
-operations.\+c 的引用(Include)关系图\+:
-\nopagebreak
+operations.\+c 的引用(Include)关系图\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -34,6 +33,8 @@ void {\bfseries create\+\_\+data} (char $\ast$relation, int base\+\_\+address, i
 void \mbox{\hyperlink{operations_8c_a082a8a3b4d4dc490e00faf3dbc6007ff}{linear\+\_\+search}} (int base\+\_\+address, int value)
 \item 
 void \mbox{\hyperlink{operations_8c_aa94d5a0ce423aed14de75a020c379dc3}{project}} (int base\+\_\+address)
+\item 
+int \mbox{\hyperlink{operations_8c_ab54d59b793dd9cf14867c1276e14f450}{nested\+\_\+loop\+\_\+join}} (int base\+\_\+addr\+\_\+r, int base\+\_\+addr\+\_\+s)
 \end{DoxyCompactItemize}
 
 
@@ -62,6 +63,22 @@ Shi
 {\em value} & 要搜索的值 \\
 \hline
 \end{DoxyParams}
+\mbox{\Hypertarget{operations_8c_ab54d59b793dd9cf14867c1276e14f450}\label{operations_8c_ab54d59b793dd9cf14867c1276e14f450}} 
+\index{operations.c@{operations.c}!nested\_loop\_join@{nested\_loop\_join}}
+\index{nested\_loop\_join@{nested\_loop\_join}!operations.c@{operations.c}}
+\subsubsection{\texorpdfstring{nested\_loop\_join()}{nested\_loop\_join()}}
+{\footnotesize\ttfamily int nested\+\_\+loop\+\_\+join (\begin{DoxyParamCaption}\item[{int}]{base\+\_\+addr\+\_\+r,  }\item[{int}]{base\+\_\+addr\+\_\+s }\end{DoxyParamCaption})}
+
+Nested loop join 操作 
+\begin{DoxyParams}{参数}
+{\em base\+\_\+addr\+\_\+r} & R 关系基地址 \\
+\hline
+{\em base\+\_\+addr\+\_\+s} & S 关系基地址 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+join后起始地址 
+\end{DoxyReturn}
 \mbox{\Hypertarget{operations_8c_aa94d5a0ce423aed14de75a020c379dc3}\label{operations_8c_aa94d5a0ce423aed14de75a020c379dc3}} 
 \index{operations.c@{operations.c}!project@{project}}
 \index{project@{project}!operations.c@{operations.c}}

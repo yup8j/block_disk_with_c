@@ -15,4 +15,6 @@ void linear_search(int base_address, int value);
 
 void project(int base_address);
 
+int nested_loop_join(int base_addr_r, int base_addr_s);
+
 #endif //V1_EXP4_OPERATIONS_H

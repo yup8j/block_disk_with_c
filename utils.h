@@ -13,7 +13,7 @@
 #define S_TIMES 4
 #define SEARCH_START 20000
 #define PROJECTION_START 30000
-#define JOIN_BASE 40000
+#define JOIN_START 40000
 
 #include "extmem.h"
 

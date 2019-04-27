@@ -182,7 +182,7 @@ void project(int base_address) {
     int addr = base_address;
     int capacity, index_saver = 0, data;
     int start_addr, save_to, next_addr;
-    start_addr = get_next_addr(PROJ_START);
+    start_addr = get_next_addr(PROJECTION_START);
     save_to = start_addr;
     do {
         read_blk((unsigned int) addr, &buf, &blk);
@@ -202,14 +202,53 @@ void project(int base_address) {
     freeBuffer(&buf);
 }
 
+/**
+ * Nested loop join 操作
+ * @param base_addr_r R 关系基地址
+ * @param base_addr_s S 关系基地址
+ * @return join后起始地址
+ */
 
-void nested_loop_join(int base_addr) {
+int nested_loop_join(int base_addr_r, int base_addr_s) {
     Buffer buf;
     int index_saver = 0;
     int start_addr, save_to;
-    unsigned char *
+    unsigned char *blk_saver, *blk_1, *blk_2;
+    unsigned char tmp[8];
+    int capacity1, capacity2, value1, value2;
     init_buffer(&buf);
-    start_addr = get_next_addr(JOIN_BASE);
+    clear_mark();
+    start_addr = get_next_addr(JOIN_START);
     save_to = start_addr;
-
+    blk_saver = getNewBlockInBuffer(&buf);
+    int next_r, next_s;
+    next_r = base_addr_r;
+    do {
+        read_blk((unsigned int) next_r, &buf, &blk_1);
+        capacity1 = convert(blk_1 + 8 * 7);
+        next_r = convert(blk_1 + 8 * 7 + 4);
+        next_s = base_addr_s;
+        while (next_s) {
+            read_blk((unsigned int) next_s, &buf, &blk_2);
+            capacity2 = convert(blk_2 + 8 * 7);
+            next_s = convert(blk_2 + 8 * 7 + 4);
+            for (int offset1 = 0; offset1 < capacity1; ++offset1) {
+                for (int offset2 = 0; offset2 < capacity2; ++offset2) {
+                    value1 = convert(blk_1 + offset1 * 8);
+                    value2 = convert(blk_2 + offset2 * 8);
+                    if (value1 == value2) {
+                        save_blk(&buf, &blk_saver, blk_1 + offset1 * 8, &index_saver, &save_to, JOIN_START);
+                        memcpy(tmp, blk_2 + offset2 * 8 + 4, 4);
+                        memset(tmp + 4, 0, 4);
+                        save_blk(&buf, &blk_saver, tmp, &index_saver, &save_to, JOIN_START);
+                    }
+                }
+            }
+            freeBlockInBuffer(blk_2, &buf);
+        }
+        freeBlockInBuffer(blk_1, &buf);
+    } while (next_r);
+    save_last_blk(&buf, blk_saver, index_saver, save_to);
+    freeBuffer(&buf);
+    return JOIN_START + 1;
 }
